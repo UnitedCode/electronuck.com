@@ -46,12 +46,14 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: clip;
 	background: var(--void);
 }
 
 body {
 	margin: 0;
 	min-width: 320px;
+	overflow-x: clip;
 	background:
 		radial-gradient(circle at 13% 16%, rgba(110, 220, 242, 0.07) 0 1px, transparent 1.5px),
 		radial-gradient(circle at 84% 29%, rgba(125, 204, 189, 0.08) 0 1px, transparent 1.5px),
@@ -131,10 +133,28 @@ a {
 	font-weight: 800;
 	line-height: 0.9;
 	letter-spacing: -0.055em;
+	white-space: nowrap;
 }
 
 .project-title-long {
-	font-size: clamp(2.5rem, 5vw, 5rem);
+	font-size: clamp(2.1rem, 4vw, 4rem);
+}
+
+.project-title-keyboard {
+	font-size: clamp(2.5rem, 4.3vw, 4.5rem);
+}
+
+.keyboard-square {
+	display: inline-block;
+	margin-left: 0.22em;
+	color: var(--magenta);
+	font-family: var(--font-display);
+	font-size: 0.46em;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 1;
+	transform: translateY(-0.95em);
+	-webkit-text-fill-color: var(--magenta);
 }
 
 .text-link,
@@ -313,21 +333,6 @@ a {
 		radial-gradient(circle at 88% 70%, rgba(197, 30, 138, 0.13), transparent 30%),
 		linear-gradient(115deg, #07131f 0 58%, #10091b 100%);
 	clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
-}
-
-.projects-section::before {
-	position: absolute;
-	z-index: -2;
-	inset: 0 -2rem;
-	border-inline: 1px solid rgba(125, 204, 189, 0.12);
-	background: linear-gradient(
-		90deg,
-		rgba(110, 220, 242, 0.025),
-		transparent 38%,
-		transparent 62%,
-		rgba(197, 30, 138, 0.025)
-	);
-	content: '';
 }
 
 .project-panel {

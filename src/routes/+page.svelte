@@ -213,7 +213,9 @@
 			class="project-panel project-keyboard mt-[clamp(7rem,13vw,14rem)] grid grid-cols-[minmax(20rem,0.75fr)_minmax(25rem,1.25fr)] items-center gap-[clamp(3rem,7vw,8rem)] max-md:grid-cols-1"
 		>
 			<div class="project-console keyboard-console max-md:order-2">
-				<h3 class="project-title">Keyboard²</h3>
+				<h3 class="project-title project-title-keyboard" aria-label="Keyboard squared">
+					Keyboard<span class="keyboard-square" aria-hidden="true">2</span>
+				</h3>
 				<p class="mt-7 mb-4 text-[clamp(1.15rem,1.7vw,1.45rem)] leading-snug font-semibold">
 					A velocity-sensitive MIDI instrument disguised as a full-size beige computer keyboard.
 				</p>
