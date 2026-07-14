@@ -56,7 +56,6 @@
 		class="hero relative isolate min-h-[calc(100svh-5rem)] overflow-hidden px-[var(--page-gutter)] pt-[clamp(2.5rem,6vw,6rem)] max-md:min-h-0 max-md:pt-12"
 		aria-labelledby="hero-title"
 	>
-		<div class="hero-glint" aria-hidden="true"></div>
 		<img
 			class="wordmark mx-auto -mt-14 -mb-10 h-auto w-[clamp(18rem,38vw,36rem)] drop-shadow-[0_0_18px_rgba(110,220,242,0.18)] max-md:-mt-8 max-md:mb-0 max-md:w-[min(22rem,92vw)]"
 			src="/images/brand/electronuck-logo.png"
@@ -66,6 +65,7 @@
 		/>
 
 		<div class="relative z-2 mx-auto w-full max-w-[90rem]">
+			<div class="hero-glint" aria-hidden="true"></div>
 			<h1
 				id="hero-title"
 				class="y2k-title relative m-0 w-[min(12ch,100%)] font-display text-[clamp(3rem,7.2vw,7.5rem)] leading-[0.86] font-extrabold tracking-[-0.055em] text-balance uppercase italic max-md:text-[clamp(2.65rem,11.5vw,4.5rem)] max-md:leading-[0.92]"

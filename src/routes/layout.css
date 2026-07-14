@@ -223,8 +223,8 @@ a {
 .hero-glint {
 	position: absolute;
 	z-index: -1;
-	top: 18%;
-	right: 13%;
+	top: 1.5rem;
+	right: 4%;
 	width: 1px;
 	height: 1px;
 	background: white;
