@@ -1,3 +1,25 @@
+<script lang="ts">
+	import { resolve } from '$app/paths';
+	import SiteFooter from '$lib/components/SiteFooter.svelte';
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
+
+	const video = 'https://www.youtube.com/watch?v=1VQUEm7suBc';
+	const short = 'https://www.youtube.com/shorts/urLUqi2jPyE';
+	const talk = 'https://www.youtube.com/watch?v=6v_yg4s-u_g';
+	const dsp = 'https://github.com/nathansbradshaw/synthphone_e_vocal_dsp';
+	const openSauce =
+		'https://www.opensauce.com/exhibits/the-cubical-collection-musical-instruments-disguised-as-office-equipment';
+
+	const capabilities = [
+		['Pitch', 'Correction and shifting toward selected musical notes'],
+		['Formant', 'Preservation and deliberate vocal-character changes'],
+		['Vocoder', 'Voice-shaped synthesis from a harmonically rich carrier'],
+		['Harmony', 'Multiple MIDI-controlled target frequencies'],
+		['Texture', 'Bit-depth and sample-rate reduction'],
+		['Instrument', 'MIDI synthesis, percussion, keypad controls, and OLED menus']
+	];
+</script>
+
 <svelte:head>
 	<title>Synthphone-E | ElectroNuck</title>
 	<meta
@@ -6,16 +28,206 @@
 	/>
 </svelte:head>
 
-<main
-	class="mx-auto min-h-screen w-[calc(100%-2*var(--page-gutter))] max-w-[90rem] py-[clamp(4rem,10vw,10rem)]"
->
-	<h1
-		class="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.9] font-extrabold tracking-[-0.05em] uppercase italic"
-	>
-		Synthphone-E
-	</h1>
-	<p class="mt-8 max-w-3xl text-[clamp(1.1rem,1.7vw,1.45rem)] leading-relaxed">
-		A real-time vocal-effects processor, synthesizer, and MIDI instrument built inside an old
-		telephone.
-	</p>
+<SiteHeader />
+
+<main>
+	<section class="page-hero page-hero-phone" aria-labelledby="page-title">
+		<div class="page-hero-copy">
+			<a class="meta text-link" href={resolve('/#projects')}>← All projects</a>
+			<h1 id="page-title" class="signal-title mt-10">Synthphone-E</h1>
+			<p class="page-lead">
+				A real-time vocal-effects processor, synthesizer, and MIDI instrument built inside an old
+				telephone.
+			</p>
+			<p class="max-w-[62ch] leading-relaxed text-paper/80">
+				The handset's original speaker is used in reverse as a deliberately lo-fi microphone. A
+				Daisy Seed inside the phone handles the audio processing, synthesis, controls, and display.
+			</p>
+			<div class="mt-8 flex flex-wrap gap-x-8 gap-y-4">
+				<a class="action text-crt" href={video} target="_blank" rel="noreferrer"
+					>Watch the build ↗</a
+				>
+				<a class="action text-paper" href={dsp} target="_blank" rel="noreferrer"
+					>Inspect the vocal DSP ↗</a
+				>
+			</div>
+		</div>
+		<figure class="page-artifact phone-artifact">
+			<img
+				src="/images/projects/synthphone-e.jpg"
+				alt="Synthphone-E, a burgundy push-button telephone with an OLED and exposed electronics"
+				width="1280"
+				height="960"
+			/>
+			<figcaption class="artifact-caption">
+				<span>Artifact / active prototype</span><span>Daisy Seed / embedded Rust</span>
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="content-section content-split" aria-labelledby="origin-title">
+		<div>
+			<p class="meta text-crt">The original request</p>
+			<h2 id="origin-title" class="section-title mt-4">One microphone. Several bad decisions.</h2>
+		</div>
+		<div class="scope-chain" aria-label="How the project grew in scope">
+			<div><b>01</b><span>Speak into a telephone handset speaker</span></div>
+			<div><b>02</b><span>Use a thrift-store phone as the enclosure</span></div>
+			<div><b>03</b><span>Give the unused buttons a synthesizer</span></div>
+			<div><b>04</b><span>Add real-time vocal processing</span></div>
+			<div><b>05</b><span>Keep adding modes instead of stopping</span></div>
+		</div>
+	</section>
+
+	<section class="content-section" aria-labelledby="capabilities-title">
+		<header class="content-heading">
+			<p class="meta text-phosphor">Current capabilities</p>
+			<h2 id="capabilities-title" class="section-title mt-4">The phone has profiles now.</h2>
+			<p>
+				The current firmware extends beyond the version shown in the 2025 build video. It remains an
+				experimental instrument, not a complete menu of finished promises.
+			</p>
+		</header>
+		<div class="capability-grid mt-14">
+			{#each capabilities as capability, index (capability[0])}
+				<article>
+					<span class="meta">0{index + 1}</span>
+					<h3>{capability[0]}</h3>
+					<p>{capability[1]}</p>
+				</article>
+			{/each}
+		</div>
+	</section>
+
+	<section class="signal-lab" aria-labelledby="signal-title">
+		<div class="content-heading">
+			<p class="meta text-crt">Embedded signal path</p>
+			<h2 id="signal-title" class="section-title mt-4">The voice goes in. Math happens.</h2>
+			<p>
+				Audio moves through overlapping windows so frequency-domain effects can run continuously
+				without stopping the real-time input and output path.
+			</p>
+		</div>
+		<div class="signal-chain" aria-label="Synthphone-E audio processing signal chain">
+			<div>
+				<span class="meta">Input</span><strong>Handset</strong><small
+					>Lo-fi speaker transducer</small
+				>
+			</div>
+			<i aria-hidden="true">→</i>
+			<div>
+				<span class="meta">Capture</span><strong>48 kHz</strong><small>Continuous ring buffer</small
+				>
+			</div>
+			<i aria-hidden="true">→</i>
+			<div>
+				<span class="meta">Analyze</span><strong>FFT</strong><small>Overlapping audio windows</small
+				>
+			</div>
+			<i aria-hidden="true">→</i>
+			<div>
+				<span class="meta">Transform</span><strong>DSP</strong><small
+					>Pitch / formant / vocode</small
+				>
+			</div>
+			<i aria-hidden="true">→</i>
+			<div>
+				<span class="meta">Output</span><strong>Audio</strong><small
+					>Reconstructed in real time</small
+				>
+			</div>
+		</div>
+		<div class="definition-grid">
+			<article>
+				<h3>Pitch correction</h3>
+				<p>Moves the detected voice toward a musical note without changing playback speed.</p>
+			</article>
+			<article>
+				<h3>Formants</h3>
+				<p>Preserve or alter the resonant character of the voice separately from pitch.</p>
+			</article>
+			<article>
+				<h3>Vocoding</h3>
+				<p>Applies the changing spectral shape of the voice to a synthesized carrier.</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="failure-section" aria-labelledby="failure-title">
+		<div class="failure-code" aria-hidden="true">
+			<span>WRITE HEAD</span>
+			<div class="buffer-track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+			<span>READ HEAD / COLLISION</span>
+		</div>
+		<div>
+			<p class="meta text-arc">Failure report / circular buffer</p>
+			<h2 id="failure-title" class="section-title mt-4">The bug we saved for later.</h2>
+			<p class="mt-6 max-w-[62ch] leading-relaxed">
+				An early buffer defect produced buzzing and high-frequency artifacts. It was tolerable until
+				vocoder development made it impossible to ignore. Following the data by hand, making the
+				problem worse once, and then rewriting the buffer finally made the vocoder work.
+			</p>
+			<a class="text-link mt-7" href={video} target="_blank" rel="noreferrer"
+				>See the ballerina, skater boy, and cemetery versions ↗</a
+			>
+		</div>
+	</section>
+
+	<section class="content-section status-grid" aria-labelledby="status-title">
+		<article>
+			<p class="meta text-crt">Open Sauce 2025</p>
+			<h2 class="section-title mt-4">A deadline enters the signal chain.</h2>
+			<p>
+				Open Sauce forced Enoch and Nathan to stop adding features, fix the blocking failures, and
+				turn the instrument into something people could actually try in public.
+			</p>
+			<a class="text-link mt-6" href={talk} target="_blank" rel="noreferrer"
+				>Watch the technical talk ↗</a
+			>
+		</article>
+		<article>
+			<p class="meta text-arc">Current state</p>
+			<h2 id="status-title" class="section-title mt-4">Still experimental. Still expanding.</h2>
+			<p>
+				Current work includes harmony, MIDI synthesis, synthesized percussion, and additional
+				performance controls. Synthphone-E is an active prototype, not a commercial product.
+			</p>
+			<a class="text-link mt-6" href={dsp} target="_blank" rel="noreferrer"
+				>Inspect the vocal DSP ↗</a
+			>
+		</article>
+	</section>
+
+	<section class="link-deck" aria-labelledby="links-title">
+		<div>
+			<p class="meta text-phosphor">External records</p>
+			<h2 id="links-title" class="section-title mt-4">Watch it fail. Read what survived.</h2>
+		</div>
+		<nav aria-label="Synthphone-E links">
+			<a href={video} target="_blank" rel="noreferrer"
+				><span>Main build video</span><b>18:07 ↗</b></a
+			>
+			<a href={short} target="_blank" rel="noreferrer"
+				><span>Original introduction</span><b>Short ↗</b></a
+			>
+			<a href={talk} target="_blank" rel="noreferrer"
+				><span>Springfield Devs talk</span><b>Recording ↗</b></a
+			>
+			<a href={dsp} target="_blank" rel="noreferrer"
+				><span>Vocal DSP repository</span><b>Source ↗</b></a
+			>
+			<a href={openSauce} target="_blank" rel="noreferrer"
+				><span>The Cubical Collection</span><b>Open Sauce ↗</b></a
+			>
+		</nav>
+	</section>
+
+	<nav class="project-switcher" aria-label="Other projects">
+		<a href={resolve('/')}><span class="meta">Return</span><strong>ElectroNuck home</strong></a>
+		<a class="text-right" href={resolve('/projects/keyboard-keyboard')}
+			><span class="meta">Next project</span><strong>Keyboard² →</strong></a
+		>
+	</nav>
 </main>
+
+<SiteFooter />
