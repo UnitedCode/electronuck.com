@@ -29,4 +29,7 @@ storybook-static
 
 .idea/
 
+.playwright-mcp
+
 /.agents/context/
+/.agents/screenshots/
