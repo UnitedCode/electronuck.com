@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">ElectroNuck favicon</title>
+  <desc id="description">A cyan E and amber N above three magenta speed bars on a dark square.</desc>
+  <rect width="512" height="512" rx="56" fill="#03050c"/>
+  <path fill="#6edcf2" d="M72 92h177l-16 48H133l-9 40h91l-15 45h-86l-11 47h104l-17 52H35L84 92z"/>
+  <path fill="#ffb238" d="M249 92h62l-49 232h-62l49-232zm47 0h58l69 232h-61L296 92zm116 0h62l-49 232h-62l49-232z"/>
+  <path fill="#c51e8a" d="M64 350h384l-16 34H48l16-34zm-16 47h384l-16 34H32l16-34zm-16 47h352l-13 28H19l13-28z"/>
+</svg>
