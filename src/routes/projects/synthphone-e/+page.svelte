@@ -68,7 +68,7 @@
 	<section class="content-section content-split" aria-labelledby="origin-title">
 		<div>
 			<p class="meta text-crt">The original request</p>
-			<h2 id="origin-title" class="section-title mt-4">One microphone. Several bad decisions.</h2>
+			<h2 id="origin-title" class="section-title mt-4">How a microphone became Synthphone-E.</h2>
 		</div>
 		<div class="scope-chain" aria-label="How the project grew in scope">
 			<div><b>01</b><span>Speak into a telephone handset speaker</span></div>
@@ -84,8 +84,8 @@
 			<p class="meta text-phosphor">Current capabilities</p>
 			<h2 id="capabilities-title" class="section-title mt-4">The phone has profiles now.</h2>
 			<p>
-				The current firmware extends beyond the version shown in the 2025 build video. It remains an
-				experimental instrument, not a complete menu of finished promises.
+				The firmware has grown since the 2025 build video. These are the modes running on the
+				current prototype.
 			</p>
 		</header>
 		<div class="capability-grid mt-14">
@@ -153,55 +153,10 @@
 		</div>
 	</section>
 
-	<section class="failure-section" aria-labelledby="failure-title">
-		<div class="failure-code" aria-hidden="true">
-			<span>WRITE HEAD</span>
-			<div class="buffer-track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-			<span>READ HEAD / COLLISION</span>
-		</div>
-		<div>
-			<p class="meta text-arc">Failure report / circular buffer</p>
-			<h2 id="failure-title" class="section-title mt-4">The bug we saved for later.</h2>
-			<p class="mt-6 max-w-[62ch] leading-relaxed">
-				An early buffer defect produced buzzing and high-frequency artifacts. It was tolerable until
-				vocoder development made it impossible to ignore. Following the data by hand, making the
-				problem worse once, and then rewriting the buffer finally made the vocoder work.
-			</p>
-			<a class="text-link mt-7" href={video} target="_blank" rel="noreferrer"
-				>See the ballerina, skater boy, and cemetery versions ↗</a
-			>
-		</div>
-	</section>
-
-	<section class="content-section status-grid" aria-labelledby="status-title">
-		<article>
-			<p class="meta text-crt">Open Sauce 2025</p>
-			<h2 class="section-title mt-4">A deadline enters the signal chain.</h2>
-			<p>
-				Open Sauce forced Enoch and Nathan to stop adding features, fix the blocking failures, and
-				turn the instrument into something people could actually try in public.
-			</p>
-			<a class="text-link mt-6" href={talk} target="_blank" rel="noreferrer"
-				>Watch the technical talk ↗</a
-			>
-		</article>
-		<article>
-			<p class="meta text-arc">Current state</p>
-			<h2 id="status-title" class="section-title mt-4">Still experimental. Still expanding.</h2>
-			<p>
-				Current work includes harmony, MIDI synthesis, synthesized percussion, and additional
-				performance controls. Synthphone-E is an active prototype, not a commercial product.
-			</p>
-			<a class="text-link mt-6" href={dsp} target="_blank" rel="noreferrer"
-				>Inspect the vocal DSP ↗</a
-			>
-		</article>
-	</section>
-
 	<section class="link-deck" aria-labelledby="links-title">
 		<div>
 			<p class="meta text-phosphor">External records</p>
-			<h2 id="links-title" class="section-title mt-4">Watch it fail. Read what survived.</h2>
+			<h2 id="links-title" class="section-title mt-4">Build logs and source.</h2>
 		</div>
 		<nav aria-label="Synthphone-E links">
 			<a href={video} target="_blank" rel="noreferrer"

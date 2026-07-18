@@ -41,9 +41,9 @@
 				<span class="block">and force it to perform.</span>
 			</h1>
 			<p class="mt-8 w-full max-w-2xl text-[clamp(1rem,1.4vw,1.25rem)] leading-[1.55] max-md:mt-6">
-				Occasionally we make other mistakes. ElectroNuck is Enoch and Nathan Bradshaw, two
-				software-engineer brothers building unnecessarily complicated projects and posting the
-				results on YouTube.
+				ElectroNuck is Enoch and Nathan Bradshaw, software-engineer brothers who turn obsolete
+				hardware into overbuilt instruments and document the mess on YouTube. Sometimes they build
+				other things too.
 			</p>
 			<div class="mt-7 flex flex-wrap gap-x-8 gap-y-4 max-xs:flex-col max-xs:items-start">
 				<a class="action text-crt" href={youtube} target="_blank" rel="noreferrer">
@@ -109,8 +109,8 @@
 			</h2>
 			<p class="mt-4 max-w-[62ch] text-[clamp(1rem,1.4vw,1.2rem)] leading-relaxed">
 				The Cubical Collection combines a telephone that processes vocals with a computer keyboard
-				that sends velocity-sensitive MIDI. Open Sauce lists Enoch and Nathan Bradshaw as its makers
-				and exhibitors.
+				that sends velocity-sensitive MIDI. Enoch and Nathan are bringing both instruments to Open
+				Sauce 2026.
 			</p>
 			<div class="my-8 grid grid-cols-[0.7fr_1.3fr] border-y border-phosphor/30 max-md:grid-cols-1">
 				<div class="flex flex-col gap-2 py-4">
@@ -248,7 +248,7 @@
 			<p class="meta mt-5 text-phosphor">12:27 / February 27, 2026</p>
 			<p class="mt-4 max-w-[62ch] text-[clamp(1rem,1.4vw,1.2rem)] leading-relaxed">
 				A Unity VR bedroom where RuneScape, Scooby-Doo, and Linkin Park help drown out an argument
-				in the kitchen. Because not every obsolete technology needs to become an instrument.
+				in the kitchen. This time, the phone gets the day off.
 			</p>
 			<div class="mt-7 flex flex-wrap gap-x-8 gap-y-4 max-xs:flex-col max-xs:items-start">
 				<a
@@ -283,8 +283,9 @@
 			</figure>
 			<h3 class="mb-3 text-xl font-semibold">Enoch Bradshaw</h3>
 			<p class="leading-relaxed">
-				Project concepts, music and vocal effects, software development, presentation, and
-				performance. Originator of the telephone-microphone idea and frequent source of scope.
+				Enoch comes up with the projects, writes software, builds vocal effects, makes the music,
+				and performs. The telephone-microphone idea was his, along with most of the scope that
+				followed.
 			</p>
 		</div>
 		<div class="pt-2">
@@ -300,8 +301,8 @@
 			</figure>
 			<h3 class="mb-3 text-xl font-semibold">Nathan Bradshaw</h3>
 			<p class="leading-relaxed">
-				Embedded systems, hardware, PCB design, Rust firmware, MIDI, DSP architecture, and Keyboard²
-				development. Builds the difficult part after explaining why it is difficult.
+				Nathan handles the embedded systems, hardware, PCB design, Rust firmware, MIDI, and DSP
+				architecture. He usually gets the part that sounded simple in the pitch.
 			</p>
 		</div>
 	</section>

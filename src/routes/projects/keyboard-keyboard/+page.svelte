@@ -66,13 +66,13 @@
 		</div>
 		<div class="prose-stack">
 			<p>
-				Keyboard² resembles a full-size IBM Model M-style office keyboard, but every part of the
-				surface has been reassigned to performance. The alphanumeric field plays notes, the function
-				area changes settings, and the right side triggers drums.
+				Keyboard² uses the shell and proportions of a full-size IBM Model M-style office keyboard.
+				The alphanumeric field plays notes, the function area changes settings, and the right side
+				triggers drums.
 			</p>
 			<p>
-				The familiar object becomes a wide musical controller without pretending the current
-				prototype is finished hardware.
+				The beige shell still reads as office equipment until the colored keys and twelve knobs give
+				it away.
 			</p>
 		</div>
 	</section>
@@ -81,9 +81,7 @@
 		<header class="content-heading">
 			<p class="meta text-phosphor">Physical control map</p>
 			<h2 id="map-title" class="section-title mt-4">One hundred reasons not to use QWERTY.</h2>
-			<p>
-				The key groups follow the actual firmware ranges. Color identifies function, not decoration.
-			</p>
+			<p>The key groups follow the firmware ranges, and the colors mark what each group does.</p>
 		</header>
 		<div
 			class="keyboard-map"
@@ -151,7 +149,7 @@
 		</div>
 		<div>
 			<p class="meta text-arc">Hall-effect velocity</p>
-			<h2 id="velocity-title" class="section-title mt-4">Not just on or off.</h2>
+			<h2 id="velocity-title" class="section-title mt-4">Speed becomes velocity.</h2>
 			<p class="mt-6 max-w-[62ch] leading-relaxed">
 				Each key uses an analog magnetic sensor. The firmware measures how quickly the key moves
 				between two actuation thresholds and converts that elapsed time into MIDI velocity. Faster
@@ -188,58 +186,16 @@
 				MIDI devices such as Synthphone-E. The two instruments share the office disguise and enough
 				of the MIDI language to perform together.
 			</p>
-			<p class="prototype-note mt-6">
-				<strong>Known mismatch:</strong> Keyboard² sends Program Change messages that Synthphone-E currently
-				ignores. The relationship is real; perfect interoperability is not.
-			</p>
 		</div>
 		<div class="midi-connection" aria-hidden="true">
 			<span>Keyboard²</span><i>MIDI OUT ········· MIDI IN</i><span>Synthphone-E</span>
 		</div>
 	</section>
 
-	<section class="failure-section" aria-labelledby="prototype-title">
-		<div class="pcb-correction" aria-hidden="true">
-			<span class="meta">PCB REV / CURRENT</span>
-			<i></i><i></i><i></i><i></i>
-			<b>2 documented corrections</b>
-		</div>
-		<div>
-			<p class="meta text-arc">Prototype status</p>
-			<h2 id="prototype-title" class="section-title mt-4">
-				The bodge wires are part of the record.
-			</h2>
-			<p class="mt-6 max-w-[62ch] leading-relaxed">
-				The current PCB needs one solder bridge to enable the final sensor multiplexers and one wire
-				to route a potentiometer signal to a valid ADC pin. Keyboard² is an active prototype, not a
-				production keyboard. MIDI input is not presented as complete.
-			</p>
-		</div>
-	</section>
-
-	<section class="content-section status-grid" aria-labelledby="exhibit-title">
-		<article>
-			<p class="meta text-laser">Open Sauce 2026</p>
-			<h2 id="exhibit-title" class="section-title mt-4">The Cubical Collection.</h2>
-			<p>
-				Open Sauce lists Keyboard² with Synthphone-E as <em
-					>The Cubical Collection: Musical Instruments Disguised as Office Equipment</em
-				>, made and exhibited by Enoch and Nathan Bradshaw.
-			</p>
-		</article>
-		<article class="event-facts">
-			<div><span class="meta">Dates</span><strong>July 17–19, 2026</strong></div>
-			<div><span class="meta">Location</span><strong>San Mateo County Event Center</strong></div>
-			<a class="text-link" href={openSauce} target="_blank" rel="noreferrer"
-				>Official exhibit listing ↗</a
-			>
-		</article>
-	</section>
-
 	<section class="link-deck" aria-labelledby="links-title">
 		<div>
 			<p class="meta text-phosphor">Project records</p>
-			<h2 id="links-title" class="section-title mt-4">Source first. Build video later.</h2>
+			<h2 id="links-title" class="section-title mt-4">Firmware, schematics, and exhibit notes.</h2>
 		</div>
 		<nav aria-label="Keyboard² links">
 			<a href={source} target="_blank" rel="noreferrer"

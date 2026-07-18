@@ -1167,11 +1167,6 @@ a {
 	font-size: clamp(4rem, 12vw, 11rem);
 }
 
-.video-hero-copy > p:last-of-type {
-	max-width: 60ch;
-	line-height: 1.7;
-}
-
 .video-index {
 	border-top: 2px solid var(--cyan);
 }
