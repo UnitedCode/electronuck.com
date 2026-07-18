@@ -54,34 +54,19 @@
 				height="960"
 			/>
 			<figcaption class="artifact-caption">
-				<span>Artifact / active prototype</span><span>100 sensors / 12 knobs</span>
+				<span>Daisy Seed / embedded Rust</span><span>100 sensors / 12 knobs</span>
 			</figcaption>
 		</figure>
-	</section>
-
-	<section class="content-section content-split" aria-labelledby="idea-title">
-		<div>
-			<p class="meta text-laser">The disguise</p>
-			<h2 id="idea-title" class="section-title mt-4">A Model M that never learned to type.</h2>
-		</div>
-		<div class="prose-stack">
-			<p>
-				Keyboard² uses the shell and proportions of a full-size IBM Model M-style office keyboard.
-				The alphanumeric field plays notes, the function area changes settings, and the right side
-				triggers drums.
-			</p>
-			<p>
-				The beige shell still reads as office equipment until the colored keys and twelve knobs give
-				it away.
-			</p>
-		</div>
 	</section>
 
 	<section id="key-map" class="key-map-section" aria-labelledby="map-title">
 		<header class="content-heading">
 			<p class="meta text-phosphor">Physical control map</p>
-			<h2 id="map-title" class="section-title mt-4">One hundred reasons not to use QWERTY.</h2>
-			<p>The key groups follow the firmware ranges, and the colors mark what each group does.</p>
+			<h2 id="map-title" class="section-title mt-4">The control map.</h2>
+			<p>
+				Seventy keys form the Wicki-Hayden note field, ten handle settings and performance controls,
+				and twenty trigger General MIDI percussion. Twelve knobs send continuous controller values.
+			</p>
 		</header>
 		<div
 			class="keyboard-map"
@@ -158,33 +143,12 @@
 		</div>
 	</section>
 
-	<section class="signal-lab" aria-labelledby="firmware-title">
-		<div class="content-heading">
-			<p class="meta text-laser">Embedded Rust / RTIC</p>
-			<h2 id="firmware-title" class="section-title mt-4">A thousand scans every second.</h2>
-			<p>
-				A Daisy Seed reads 100 sensors through analog multiplexers, filters their values, tracks
-				each key state, calculates velocity, scans the knobs, and queues MIDI messages.
-			</p>
-		</div>
-		<div class="firmware-strip">
-			<div><strong>13</strong><span>analog multiplexers</span></div>
-			<div><strong>1 kHz</strong><span>sensor scan task</span></div>
-			<div><strong>100</strong><span>key state machines</span></div>
-			<div><strong>12</strong><span>continuous controls</span></div>
-			<div><strong>MIDI</strong><span>notes, drums, bend, CC</span></div>
-		</div>
-		<p class="state-machine meta">Idle → First actuated → Fully actuated → Released → Idle</p>
-	</section>
-
 	<section class="content-section connection-grid" aria-labelledby="connection-title">
 		<div>
 			<p class="meta text-crt">The collection connection</p>
 			<h2 id="connection-title" class="section-title mt-4">Built to control the phone.</h2>
 			<p class="mt-6 leading-relaxed">
-				Keyboard² can send melody notes, chords, drum notes, pitch bend, and controller values to
-				MIDI devices such as Synthphone-E. The two instruments share the office disguise and enough
-				of the MIDI language to perform together.
+				Keyboard² sends notes, drums, pitch bend, and controller values to Synthphone-E over MIDI.
 			</p>
 		</div>
 		<div class="midi-connection" aria-hidden="true">
@@ -195,7 +159,7 @@
 	<section class="link-deck" aria-labelledby="links-title">
 		<div>
 			<p class="meta text-phosphor">Project records</p>
-			<h2 id="links-title" class="section-title mt-4">Firmware, schematics, and exhibit notes.</h2>
+			<h2 id="links-title" class="section-title mt-4">Source and exhibit listing.</h2>
 		</div>
 		<nav aria-label="Keyboard² links">
 			<a href={source} target="_blank" rel="noreferrer"
