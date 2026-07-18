@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
 	import './layout.css';
 
 	let { children } = $props();
@@ -19,4 +20,5 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+<GoogleAnalytics />
 {@render children()}
